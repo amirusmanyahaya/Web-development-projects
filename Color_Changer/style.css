@@ -1,0 +1,50 @@
+*,*::before,*::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:darkgray;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-direction: column;
+}
+
+.main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.color-changer{
+    /* width: 0.8rem;
+    height: 1rem; */
+    padding: 1rem 0.8rem;
+    font-size: 1.5rem;
+    background-color: #5bc0de;
+    border-radius: 0.8rem;
+    margin-top: 1.5rem;
+    
+}
+
+.text-container .color-text{
+    color: #000000;
+    font-weight: bold;
+    text-transform: upper;
+    font-size: 4.5rem;
+    margin-top: 1.5rem;
+}
+
+.format-toggler a {
+    font-size: 2rem;
+}
