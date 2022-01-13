@@ -1,5 +1,6 @@
 *,*::before,*::after{
     box-sizing: border-box;
+    font-weight: 100;
 }
 
 /* Remove default margin */
@@ -12,43 +13,59 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd
+ {
   margin: 0;
 }
 
 body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-
-.bg-radius-shadow{
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
-    border-radius: 0.8rem;
-}
-
-.calculator-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    padding:0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
 }
 
 
-.btn-container{
+
+.grid-container{
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(100px, auto) repeat(4,100px);
 }
 
-.btn-calc{
-    padding: 3rem;
-}
-
-.result-display-container{
+.display-result{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0,0, 0.95);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: flex-end;
-    padding: 3rem
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0.8rem;
 }
+
+.display-result > .previous-operand{
+    font-size: 1rem;
+    
+    color: rgba(255,255,255, 0.58);
+}
+
+.display-result > .current-operand{
+    font-size: 1.2rem;
+    color:rgba(255,255,255, 0.75)
+}
+
+.btn-key {
+    background-color: rgba(255,255,255,0.85); 
+    border: 1px solid white;
+    font-size: 2.1rem;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+
+
